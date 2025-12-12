@@ -85,7 +85,11 @@ return {
         ["<Leader>fw"] = { "<cmd>w<cr>", desc = "File Save" },
         -- this is useful for naming menus
         -- ["<Leader>b"] = { desc = "Buffers" },
-
+        ["<Leader>tt"] = { '<Cmd>execute v:count . "ToggleTerm"<CR>', desc = "Toggle terminal" },
+      },
+      t = {
+        -- Opcional: permite fechar o terminal usando o mesmo atalho enquanto estiver nele
+        ["<Leader>tt"] = { "<Cmd>ToggleTerm<CR>", desc = "Toggle terminal" },
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
       },
