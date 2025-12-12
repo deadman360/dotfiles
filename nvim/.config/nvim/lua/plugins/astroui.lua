@@ -9,14 +9,24 @@ return {
   ---@type AstroUIOpts
   opts = {
     -- change colorscheme
-    colorscheme = "astrodark",
+    colorscheme = "dracula",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
+    init = { -- this table overrides highlights in all themes
+      -- Normal = { bg = "#000000" },
+    },
+    dracula = { -- a table of overrides/changes when applying the astrotheme theme
+      -- Normal = { bg = "#000000" },
+    },
     highlights = {
-      init = { -- this table overrides highlights in all themes
-        -- Normal = { bg = "#000000" },
-      },
-      astrodark = { -- a table of overrides/changes when applying the astrotheme theme
-        -- Normal = { bg = "#000000" },
+      init = {
+        Normal = { bg = "NONE" },
+        NormalNC = { bg = "NONE" },
+        SignColumn = { bg = "NONE" },
+        NormalFloat = { bg = "NONE" },
+        FloatBorder = { bg = "NONE" },
+        VertSplit = { bg = "NONE" },
+        NeoTreeNormal = { bg = "NONE" },
+        NeoTreeNormalNC = { bg = "NONE" },
       },
     },
     -- Icons can be configured throughout the interface

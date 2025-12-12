@@ -6,11 +6,7 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  -- Pacote base de PHP (geralmente instala o Intelephense ou Phpactor dependendo da config)
   { import = "astrocommunity.pack.laravel" },
-  -- Suporte para arquivos Blade
   { import = "astrocommunity.pack.blade" },
-
-  -- Opcional: Se quiser garantir o Intelephense especificamente
-  -- (embora o pack.php geralmente já cuide disso)
+  { import = "astrocommunity.colorscheme.dracula-nvim" },
 }
