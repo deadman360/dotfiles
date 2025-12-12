@@ -6,7 +6,6 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.pack.laravel" },
   { import = "astrocommunity.pack.blade" },
   { import = "astrocommunity.colorscheme.dracula-nvim" },
 }
