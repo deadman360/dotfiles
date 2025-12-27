@@ -131,3 +131,8 @@ export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 export PATH="/home/deadman360/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/home/deadman360/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+
+# Add JBang to environment
+alias j!=jbang
+export PATH="$HOME/.jbang/bin:$HOME/.jbang/currentjdk/bin:$PATH"
+export JAVA_HOME=$HOME/.jbang/currentjdk
