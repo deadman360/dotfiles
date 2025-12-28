@@ -1,0 +1,91 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "ZedMonoNerdFontMono-Regular", "Noto Sans Mono", monospace;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(15, 20, 35, 0.8); /* Azul marinho translúcido */
+    color: #e8d5ff;
+    border-radius: 12px;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+/* Estilo das "Pílulas" */
+#workspaces,
+#clock,
+#cpu,
+#memory,
+#battery,
+#pulseaudio,
+#network,
+#tray,
+#mode {
+    background: rgba(45, 50, 80, 0.6);
+    padding: 0px 15px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    border-bottom: 2px solid rgba(187, 154, 247, 0.4); /* Linha sutil lilás */
+}
+
+/* Foco nos Workspaces */
+#workspaces button {
+    padding: 0 5px;
+    color: #7aa2f7;
+}
+
+#workspaces button.focused {
+    color: #f7768e; /* Rosa neon do wallpaper */
+    background: rgba(138, 100, 200, 0.2);
+}
+
+/* Destaque Central: Relógio */
+#clock {
+    background: linear-gradient(90deg, #5e4a8f, #f7768e);
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+}
+
+/* Indicadores de sistema com cores do Oni */
+#cpu {
+    color: #bb9af7;
+}
+#memory {
+    color: #7dcfff;
+}
+
+#battery.charging {
+    color: #9ece6a;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f7768e;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ff0000;
+        color: #ffffff;
+    }
+}
+
+#pulseaudio {
+    color: #e0af68;
+}
+#network {
+    color: #7aa2f7;
+}
+
+#tray {
+    background: transparent;
+}
