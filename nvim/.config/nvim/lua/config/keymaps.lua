@@ -26,16 +26,6 @@ map("n", "<leader>wx", "<cmd>close<cr>", { desc = "Close current window" })
 -- File save
 map("n", "<leader>fw", "<cmd>w<cr>", { desc = "File Save" })
 
--- Toggle terminal (LazyVim usa terminal nativo ou toggleterm se instalado)
--- Usando o terminal float nativo do LazyVim
-map("n", "<leader>tt", function()
-  LazyVim.terminal()
-end, { desc = "Toggle terminal" })
-
--- Terminal mode: exit terminal mode
-map("t", "<leader>tt", "<cmd>close<cr>", { desc = "Close terminal" })
-map("t", "<C-/>", "<cmd>close<cr>", { desc = "Hide terminal" })
-
 -- Insert mode: exit with 'fd'
 map("i", "fd", "<esc>", { desc = "Exit insert mode" })
 
