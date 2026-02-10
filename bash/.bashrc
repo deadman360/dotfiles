@@ -115,24 +115,15 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
-eval "$(starship init bash)"
-export PATH="$HOME/.local/bin:$PATH"
-alias spacemacs="emacsclient -c -a 'emacs'"
-. "/home/deadman360/.deno/env"
-source /home/deadman360/.local/share/bash-completion/completions/deno.bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-eval "$(zoxide init --cmd cd bash)"
-eval "$(systemctl --user start emacs)"
-. "$HOME/.cargo/env"
-export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
-export PATH="/home/deadman360/.config/herd-lite/bin:$PATH"
-export PHP_INI_SCAN_DIR="/home/deadman360/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
-export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
-# Add JBang to environment
-alias j!=jbang
-export PATH="$HOME/.jbang/bin:$HOME/.jbang/currentjdk/bin:$PATH"
-export JAVA_HOME=$HOME/.jbang/currentjdk
+# ZVM
+export ZVM_INSTALL="$HOME/.zvm/self"
+export PATH="$PATH:$HOME/.zvm/bin"
+export PATH="$PATH:$ZVM_INSTALL/"
+
+# Created by `pipx` on 2026-01-19 19:15:03
+export PATH="$PATH:/home/deadman360/.local/bin"
+export PATH="$HOME/.local/bin:$PATH"
+. "$HOME/.cargo/env"
+eval "$(starship init bash)"
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
