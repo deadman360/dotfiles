@@ -127,3 +127,11 @@ export PATH="$HOME/.local/bin:$PATH"
 . "$HOME/.cargo/env"
 eval "$(starship init bash)"
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
