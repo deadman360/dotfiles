@@ -1,3 +1,12 @@
+# Fish Shell Configuration
+# Gruvbox theme + Starship prompt + Vi mode
+
+# Vi key bindings
+fish_vi_key_bindings
+
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    # Starship prompt
+    if type -q starship
+        starship init fish | source
+    end
 end
